@@ -3,8 +3,6 @@ var url = 'http://www.goagent.wang';
 var cheerio = require('cheerio');
 function filterChaperts(html,callback) {
 	// body...
-	var msg = {
-	}
 	var All = [];
 	var Ajson = {
 		status:200,
@@ -13,6 +11,8 @@ function filterChaperts(html,callback) {
 	var $ = cheerio.load(html);
 	var chapters = $('h5');
 	chapters.each(function (item) {
+		var msg = {
+		}
 		msg.title = $(this).find('strong').text();
 		var Amsg =  $(this).nextAll('p');
 		var body = [];
