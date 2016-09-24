@@ -39,6 +39,3 @@ var query = function(num,callback){
 	})
 }
 exports.query = query;
-query('882821709626882127',function(data){
-	console.log(data);
-});
